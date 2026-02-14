@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: grey;
+    }
+
+    header {
+       text-align: center;
+       font-family: garamond, serif;
+       background-color: green;
+       padding: 15px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+
+    .nav {
+        background-color: green;
+        padding: 15px;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav a {
+        color: black;
+        text-decoration: none;
+        font-family: garamond, serif;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 5px;
+    }
+
+    .welcome {
+        background-color: green;
+        padding: 15px;
+    }
+
+    .welcome h2 {
+        text-align : center;
+    }
+
+    .photos {
+        background-color: green;
+        padding: 15px;
+    }
+
+    footer {
+        background-color: green;
+        padding:15px;
+        text-align: center;
+    }
+
+</style>
+
+
+<body>
+<section>
+    <header>
+    <h1>BIRDWATCHING</h1>
+    <img src="dove.png" class="logo" alt="dove logo" width="50" height="50">
+    </header>
+</section>
+
+<section>
+        <ul class ="nav">
+            <li><a href="http://example.com">HOME</a></li>
+            <li><a href="http://example.com">GET STARTED</a></li>
+            <li><a href="http://example.com">PHOTOS</a></li>
+            <li><a href="http://example.com">GEAR</a></li>
+            <li><a href="http://example.com">FORUM</a></li>
+        </ul>
+</section>
+
+
+<main>
+
+<section class="welcome">
+    <h2>WELCOME</h2>
+    <p>Welcome to our fake birdwatching website.</p><br>
+    <p>So don't waste time!<p><br>
+</section>
+
+<section class="photos">
+    <h2>FAVORITE PHOTOS</h2>
+</section>
+</main>
+
+
+<section>
+    <footer>
+        <p>This is a fake website</p>
+    </footer>    
+</section>
+
+
+
+</body>
+</html>
