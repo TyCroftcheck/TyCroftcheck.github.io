@@ -10,16 +10,21 @@
     body {
         max-width: 800px;
         margin: 0 auto;
-        background-color: grey;
+        background-color: lightgreen;
     }
 
     header {
        text-align: center;
        font-family: garamond, serif;
        background-color: green;
-       padding: 15px;
+       padding: 10px;
     }
 
+    h2 
+    {
+        font-family: garamond, serif;
+    }
+    
     .logo {
         width: 50px;
         height: 50px;
@@ -29,7 +34,7 @@
     }
 
     .nav {
-        background-color: green;
+        background-color: rgb(48, 175, 48);
         padding: 15px;
         list-style-type: none;
         display: flex;
@@ -62,10 +67,21 @@
         padding: 15px;
     }
 
+    .photos h2 {
+        text-align : center;
+    }
+
+    .photogrid {
+        display: grid;
+        grid-template-columns:  .1fr .1fr;
+        grid-gap: 3px;
+        justify-content: center;
+    }
+
     footer {
         background-color: green;
         padding:15px;
-        text-align: center;
+        margin-top: 15px;
     }
 
 </style>
@@ -94,19 +110,25 @@
 
 <section class="welcome">
     <h2>WELCOME</h2>
-    <p>Welcome to our fake birdwatching website.</p><br>
-    <p>So don't waste time!<p><br>
+    <p>Welcome to our fake birdwatching site. if this were a real site, it would be the ideal place to come to learn more about birdwatching, wherther you are a beginner looking to learn how to get into birding, or an expert wanting to share ideas, tips, and photos with other like-minded people.</p><br>
+    <p>So don't waste time! Get what you need, then turn off that computer and get out into the great outdoors!<p><br>
 </section>
 
 <section class="photos">
     <h2>FAVORITE PHOTOS</h2>
+    <div class="photogrid">
+        <img src="favorite-1_th.jpg" alt="favorite1" width="50" height="50">
+        <img src="favorite-2_th.jpg" alt="favorite2" width="50" height="50">
+        <img src="favorite-3_th.jpg" alt="favorite3" width="50" height="50">
+        <img src="favorite-4_th.jpg" alt="favorite4" width="50" height="50">
+
 </section>
 </main>
 
 
 <section>
     <footer>
-        <p>This is a fake website</p>
+        <p>This fake website is modeled after the example.</p>
     </footer>    
 </section>
 
