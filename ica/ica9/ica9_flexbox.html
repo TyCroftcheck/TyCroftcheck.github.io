@@ -4,8 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+nav.part1 ul {
+  max-width: 750px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav.part1 a:link,
+nav.part1 a:visited {
+  background-color: #4d7298;
+  border: 2px solid #77a6b6;
+  border-radius: 0.5em;
+  color: white;
+  padding: 0.5em;
+  display: inline-block;
+  text-decoration: none;
+}
+
+nav.part1 ul {
+  /* Add styles here */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ------------------------- */
+
+ul.part2 {
+  max-width: 750px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #4d7298;
+  border: 2px solid #77a6b6;
+  border-radius: 0.5em;
+  color: white;
+  padding: 0.5em;
+}
+
+ul.part2 {
+  /* Add styles here */
+  display: flex;
+}
+
+li {
+  /* Add styles here */
+  flex: 1;
+}
+
+
+/* ------------------------- */
+
+ul.part3 {
+  width: 450px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li.part3 {
+  background-color: #4d7298;
+  border: 2px solid #77a6b6;
+  border-radius: 0.5em;
+  color: white;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+ul.part3 {
+  /* Add styles here */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li.part3 {
+  /* Add styles here */
+  flex: auto;
+}
+    </style>
 </head>
 <body>
-    
+
+  
+    <nav class="part1">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About Us</a></li>
+    <li><a href="/products">Our Products</a></li>
+    <li><a href="/contact">Contact Us</a></li>
+  </ul>
+</nav>
+
+
+
+<ul class="part2">
+  <li>I am small</li>
+  <li>I have more content than the very small item.</li>
+  <li>
+    I have lots of content. So much content that I don't know where it is all
+    going to go. I'm glad that CSS is pretty good at dealing with situations
+    where we end up with more words than expected!
+  </li>
+</ul>
+
+
+
+    <ul class="part3">
+      <li>Turnip</li>
+      <li>greens</li>
+      <li>yarrow</li>
+      <li>ricebean</li>
+      <li>rutabaga</li>
+      <li>endive</li>
+      <li>cauliflower</li>
+      <li>sea lettuce</li>
+      <li>kohlrabi</li>
+      <li>amaranth</li>
+</ul>
+</div>
+
 </body>
 </html>
