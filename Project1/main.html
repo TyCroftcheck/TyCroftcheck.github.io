@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ty's Portfolio Main Page</title>
-    <style>
-
-          * {
+    <title>Document</title>
+</head>
+<style>
+    * {
         box-sizing: border-box;
       }
 
         body {
-            background-color: forestgreen;
+            background-color: rgb(31, 111, 31);
             font-family: garamond, serif;
             color: white;
             font-size: 14px;
+            text-align: center;
         }
 
         header {
-            text-align: center;
-            font-size: 24px;
+            padding: 10px;
         }
+
+        h1 {
+            font-size: 36px;
+        }
+
 
         nav ul {
             background-color: darkgreen;
@@ -29,110 +34,117 @@
             margin: 0;
             display: flex;
             gap: 1em;
-            justify-content: space-evenly;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        nav a:link,
-        nav a:visited { 
+        nav a {
             color: white;
             padding: 0.5em;
             display: inline-block;
             text-decoration: none;
         }
 
-        main {
-            padding: 1em;
+        nav a:hover {
+            background-color: lightgreen;
         }
 
-        main img {
-            display: block;
-            margin: auto;
-        }
-
-
-        footer {
-            background-color: darkgreen;
-            padding: 1em;
-            text-align: left;
+        .headshot {
+            margin: 5px;
+            margin-bottom: 0px;
+            padding: 40px;
         }
 
         .imageLinks {
             display: flex;
-            gap: 1em;
             justify-content: center;
-            list-style: none;
-            padding: 0;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        @media screen and (min-width: 60em) {
-            main {
-                display: flex;
-                gap: 2em;
-            }
+        .imageLinks ul {
+            list-style: none;
+            padding: 0;
+            margin: 30px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-            main img {
-                width: 300px;
-                height: auto;
+        .about {
+            background-color: darkgreen;
+            border-width: 20px;
+        }
+
+
+        @media (max-width: 600px) {
+            .imageLinks {
+                flex-direction: column;
+                align-items: center;
             }
 
             nav ul {
-                justify-content: flex-start;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            
+            .imageLinks {
+                flex-direction: column;
+                align-items: center;
             }
 
-            footer {
-                    text-align: center;
-                }
+            .headshot {
+                width: 140px;
+            }
         }
-
-    </style>
-</head>
+</style>
 <body>
+    
+    <header>
+        <h1>Ty Croftcheck</h1>
 
+    <nav>
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
+    </header>
 
+    <main>
+        <div class="headshot">
+            <img src="TyImage.png" alt="Headshot" width="250">
+        </div>
 
-<header>
-    <h1>Ty Croftcheck</h1>
-</header>
+        <div class="about">
+        <p>This websites introduces myself as well as some of my interests and skills.<br> I am from Pittsburg, Pennsylvania, and am currently enrolled in The Univerity of Colorado Boulder<br> for a degree in Creative Technology and Design.</p>
+        </div>
 
-<nav>
-    <ul>
-        <li><a href="main.html">Home</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="photography.html">Photography</a></li>
-        <li><a href="eng.html">Engineering</a></li>
-    </ul>
-</nav>
-
-
-<main>
-    <h2>About Me</h2>
-    <img src="TyImage.png" alt="Pic of Myself" width="280" height="290">
-    <p>This websites introduces myself as well as some of my interests and skills. I am from Pittsburg, Pennsylvania, and am currently enrolled in The Univerity of Colorado Boulder for a degree in Creative Technology and Design.</p>
-        
-    <ul class="imageLinks">
-        <li>
-            <a href="music.html">
-                <img src="IMG_6274.JPG" alt="Music" width="250" height="250">
-            </a>
-        </li>
-        <li>
-            <a href="photography.html">
-                <img src="Screenshot_9-3-2026_22817_drive.google.com.jpeg" alt="Photography" width="250" height="250">
-            </a>
-        </li>
-        <li>
-            <a href="engineering.html">
-                <img src="placeholder.jpg" alt="Engineering" width="250" height="250">
-            </a>
-        </li>
-    </ul>
-</main>
-
-<footer>
-    <h2>Contact Information:</h2>
-    <p>Email: tycroftcheck@gmail.com</p>
-    <p>School Email: tycr7813@colorado.edu</p>
-</footer>
-
+        <div class="imageLinks">
+            <ul>
+                <li>
+                    <a href="music.html">
+                        <img src="IMG_6274.JPG" alt="Music" width="250">
+                        <p>Music</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="photography.html">
+                        <img src="Screenshot_9-3-2026_2296_drive.google.com.jpeg" alt="Photography" width="250">
+                        <p>Photography</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="resume.html">
+                        <img src="pexels-karola-g-4226805.jpg" alt="Resume" width="250">
+                        <p>Engineering</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
 </body>
 </html>
