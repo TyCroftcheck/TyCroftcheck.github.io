@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+      }
+
+        body {
+            background-color: forestgreen;
+            font-family: garamond, serif;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        header {
+            padding: 10px;
+        }
+
+
+        nav ul {
+            background-color: darkgreen;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1em;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            padding: 0.5em;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: lightgreen;
+        }
+
+        .headshot {
+            margin: 10px;
+            margin-bottom: 50px;
+            padding: 40px;
+        }
+
+        .imageLinks {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .imageLinks ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+
+        @media (max-width: 600px) {
+            .imageLinks {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            
+            .imageLinks {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .headshot {
+                width: 140px;
+            }
+
+                
+        }
+
+</style>
+<body>
+    
+    <header>
+        <h1>Ty Croftcheck</h1>
+
+    <nav>
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="eng.html">Engineering</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        <div class="headshot">
+            <img src="TyImage.png" alt="Headshot" width="250">
+        </div>
+
+
+        <div class="imageLinks">
+            <ul>
+                <li>
+                    <a href="music.html">
+                        <img src="IMG_6274.JPG" alt="Music" width="250">
+                        <p>Music</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="photography.html">
+                        <img src="Screenshot_9-3-2026_2296_drive.google.com.jpeg" alt="Photography" width="250">
+                        <p>Photography</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="eng.html">
+                        <img src="Screenshot_9-3-2026_22817_drive.google.com.jpeg" alt="Engineering" width="250">
+                        <p>Engineering</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

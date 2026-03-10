@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ty's Portfolio Main Page</title>
+    <style>
+
+          * {
+        box-sizing: border-box;
+      }
+
+        body {
+            background-color: forestgreen;
+            font-family: garamond, serif;
+            color: white;
+            font-size: 14px;
+        }
+
+        header {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        nav ul {
+            background-color: darkgreen;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1em;
+            justify-content: space-evenly;
+        }
+
+        nav a:link,
+        nav a:visited { 
+            color: white;
+            padding: 0.5em;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 1em;
+        }
+
+        main img {
+            display: block;
+            margin: auto;
+        }
+
+
+        footer {
+            background-color: darkgreen;
+            padding: 1em;
+            text-align: left;
+        }
+
+        .imageLinks {
+            display: flex;
+            gap: 1em;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        @media screen and (min-width: 60em) {
+            main {
+                display: flex;
+                gap: 2em;
+            }
+
+            main img {
+                width: 300px;
+                height: auto;
+            }
+
+            nav ul {
+                justify-content: flex-start;
+            }
+
+            footer {
+                    text-align: center;
+                }
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+<header>
+    <h1>Ty Croftcheck</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="eng.html">Engineering</a></li>
+    </ul>
+</nav>
+
+
+<main>
+    <h2>About Me</h2>
+    <img src="TyImage.png" alt="Pic of Myself" width="280" height="290">
+    <p>This websites introduces myself as well as some of my interests and skills. I am from Pittsburg, Pennsylvania, and am currently enrolled in The Univerity of Colorado Boulder for a degree in Creative Technology and Design.</p>
+        
+    <ul class="imageLinks">
+        <li>
+            <a href="music.html">
+                <img src="IMG_6274.JPG" alt="Music" width="250" height="250">
+            </a>
+        </li>
+        <li>
+            <a href="photography.html">
+                <img src="Screenshot_9-3-2026_22817_drive.google.com.jpeg" alt="Photography" width="250" height="250">
+            </a>
+        </li>
+        <li>
+            <a href="engineering.html">
+                <img src="placeholder.jpg" alt="Engineering" width="250" height="250">
+            </a>
+        </li>
+    </ul>
+</main>
+
+<footer>
+    <h2>Contact Information:</h2>
+    <p>Email: tycroftcheck@gmail.com</p>
+    <p>School Email: tycr7813@colorado.edu</p>
+</footer>
+
+</body>
+</html>
