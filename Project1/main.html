@@ -4,54 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="project1.css">
+</head>
     <style>
     * {
         box-sizing: border-box;
       }
-
-        body {
-            background-color: rgb(31, 111, 31);
-            font-family: garamond, serif;
-            color: white;
-            font-size: 14px;
-            text-align: center;
-        }
-
-        header {
-            padding: 10px;
-        }
-
-        h1 {
-            font-size: 36px;
-        }
-
-
-        nav ul {
-            background-color: darkgreen;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 1em;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: white;
-            padding: 0.5em;
-            display: inline-block;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            background-color: lightgreen;
-        }
-
         .headshot {
             margin: 5px;
             margin-bottom: 0px;
             padding: 40px;
+        
         }
 
         .imageLinks {
@@ -71,16 +34,21 @@
             flex-wrap: wrap;
         }
 
-        .about {
-            background-color: darkgreen;
+        .imageLinks li:hover {
+            transform: scale(1.05);
         }
+
+
+      
 
 
         @media (max-width: 600px) {
             .imageLinks {
                 flex-direction: column;
                 align-items: center;
+                
             }
+
 
             nav ul {
                     flex-direction: column;
