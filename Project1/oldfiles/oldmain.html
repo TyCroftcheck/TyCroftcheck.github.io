@@ -5,24 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="project1.css">
+</head>
     <style>
-         * {
+    * {
         box-sizing: border-box;
       }
         .headshot {
             margin: 5px;
+            margin-bottom: 0px;
             padding: 40px;
-            text-align: center;
-        }
-
-        .headshot img {
-            max-width: 250px;
-            width: 100%;
-            height: auto;
-        }
-
-        .about {
-            text-align: left;
+        
         }
 
         .imageLinks {
@@ -35,30 +27,17 @@
         .imageLinks ul {
             list-style: none;
             padding: 0;
+            margin: 30px;
             display: flex;
-            gap: 30px;
+            gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
-            text-align: center;
-            font-size: large;
         }
 
         .imageLinks li:hover {
             transform: scale(1.05);
         }
 
-        .imageLinks img {
-            width: 250;
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .aboutme {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
 
       
 
@@ -76,17 +55,15 @@
                     align-items: center;
                 }
 
-            .headshot img{
+            .headshot {
                 width: 140px;
             }
-
-            .imageLinks img {
-                width: 100%;
-            }
         }
-    </style>
+</style>
 </head>
+
 <body>
+    
     <header>
         <h1>Ty Croftcheck</h1>
 
@@ -101,38 +78,32 @@
     </header>
 
     <main>
-
-        <div class="aboutme">
         <div class="headshot">
-            <img src="headshot.PNG" alt="Headshot">
+            <img src="TyImage.png" alt="Headshot" width="250">
         </div>
 
         <div class="about">
-        <p> This website introduces myself as well as some of my interests and skills.<br>
-            I am from Pittsburgh, Pennsylvania, and am currently enrolled in <a href="https://www.colorado.edu/">The Univerity of Colorado Boulder</a><br>
-            for a degree in Creative Technology and Design. I am currently in a Band called Cat Scratch where I play the guitar.
-            Along with music I also practice photography. In this website you can find links to my Music, Photograpgy and Resume.</p>
-        </div>
+        <p>This website introduces myself as well as some of my interests and skills.<br> I am from Pittsburgh, Pennsylvania, and am currently enrolled in The Univerity of Colorado Boulder<br> for a degree in Creative Technology and Design.</p>
         </div>
 
         <div class="imageLinks">
             <ul>
                 <li>
                     <a href="music.html">
-                        <img src="guitar.JPG" alt="Music" width="250">
+                        <img src="IMG_6274.JPG" alt="Music" width="250">
                         <p>Music</p>
                     </a>
                 </li>
                 <li>
                     <a href="photography.html">
-                        <img src="Elk.jpeg" alt="Photography" width="250">
+                        <img src="Screenshot_9-3-2026_2296_drive.google.com.jpeg" alt="Photography" width="250">
                         <p>Photography</p>
                     </a>
                 </li>
                 <li>
                     <a href="resume.html">
-                        <img src="remsumeimg.jpg" alt="Resume" width="250">
-                        <p>Resume</p>
+                        <img src="pexels-karola-g-4226805.jpg" alt="Resume" width="250">
+                        <p>Engineering</p>
                     </a>
                 </li>
             </ul>

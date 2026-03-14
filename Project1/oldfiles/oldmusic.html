@@ -4,27 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="project1.css">
-    <style>
-        main {
-            color: black;
+       <style>
+
+        header {
+            text-align: center;
         }
 
-        main img {
-            align-content: center;
+        body {
+            background-color: forestgreen;
+        }
+
+        nav ul {
+            background-color: darkgreen;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1em;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            padding: 0.5em;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: lightgreen;
+        }
+
+        h1 {
+            color: white;
         }
 
         h2 {
             font-family: Garamond;
-            font-size: 5vw;
-            color: black;
             text-align: center;
+            font-size: 5vw;
+            color: White;
+        }
+
+        main {
+            color: white;
+            font-size: large;
         }
 
         main img {
             display: block;
             margin: 0 auto;
         }
+
+         @media (max-width: 600px) {
+            .imageLinks {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                    flex-direction: column;
+                    align-items: center;
+                }            
+        }
+        
+
     </style>
 </head>
 <body>
@@ -41,10 +86,11 @@
     </nav>
     </header>
 
-     <main>
+
+    <main>
         <h2>CAT SCRATCH</h2>
         
-        <img src="bandimg.jpg" alt="Band Picure">
+        <img src="IMG_6313.PNG" alt="Band Picure">
 
         <h3>Set List</h3>
         <ol>

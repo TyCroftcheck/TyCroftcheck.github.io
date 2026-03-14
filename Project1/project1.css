@@ -35,20 +35,23 @@
 header {
             padding: 10px;
             background-color: #1b512d;
+            margin: 0px;
+
         }
 
 h1 {
             font-size: 36px;
             color: white;
+            margin-left: 45px;
         }
 
 nav ul {
             background-color: darkgreen;
             list-style: none;
-            padding: 0;
-            margin: 0;
+            padding: 0px;
+            margin: 0p;
             display: flex;
-            gap: 1em;
+            gap: 3em;
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -62,6 +65,7 @@ nav ul {
 
         nav a:hover {
             background-color: lightgreen;
+            color: #020122;
         }
 
 

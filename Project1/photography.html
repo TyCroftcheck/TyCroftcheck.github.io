@@ -4,106 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-       <style>
-
-        header {
-            text-align: center;
-        }
-
-        body {
-            background-color: rgb(31, 111, 31);
-            font-family: garamond, serif;
-            color: white;
-            font-size: 14px;
-            text-align: center;
-        } 
-
-        nav ul {
-            background-color: darkgreen;
-            list-style: none;
-            padding: 0;
-            margin: 0;
+    <link rel="stylesheet" href="project1.css">
+    <style>
+         .myphotos {
             display: flex;
-            gap: 1em;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: white;
-            padding: 0.5em;
-            display: inline-block;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            background-color: lightgreen;
-        }
-
-        main {
-            padding: 10px;
-        }
-
-        .photos {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            gap: 10px;
-            max-width: 1000px;
-            margin: 10px auto;
-        }
-
-        .photos img {
+            gap: 50px;
             width: 100%;
+            overflow-x: auto;
+            padding: 20px;
+        }
+
+        .myphotos img {
+            max-width: 50vw;
+            max-height: 50vh;
+            width: auto;
+            height: auto;
+            margin-top: 0px;
             border-radius: 3px;
+            align-items: center;
         }
 
-         @media (max-width: 600px) {
-            .imageLinks {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav ul {
-                    flex-direction: column;
-                    align-items: center;
-                }            
-
-            .photos {
-                grid-template-columns: 1fr;
-            }
+        h2 {
+            margin-top: 30px;
+            font-size: 30px;
+            text-align: center;
         }
+
     </style>
 </head>
 
 <body>
-<header>
+    <header>
     <h1>Ty Croftcheck</h1>
-    <nav>
-        <ul>
-            <li><a href="main.html">Home</a></li>
-            <li><a href="music.html">Music</a></li>
-            <li><a href="photography.html">Photography</a></li>
-            <li><a href="resume.html">Resume</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="photography.html">Photography</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
-    <h2>Photography</h2>
-    <p>This is my photography page, where I uploaded some photos i took.</p>
+<h2>Photo Gallery</h2>
 
-    <div class="photos">
-        <img src="Screenshot_9-3-2026_22817_drive.google.com.jpeg" alt="">
-        <img src="Screenshot_9-3-2026_2281_drive.google.com.jpeg" alt="">
-        <img src="Screenshot_9-3-2026_22824_drive.google.com.jpeg" alt="">
-        <img src="Screenshot_9-3-2026_22833_drive.google.com.jpeg" alt="">
-        <img src="Screenshot_9-3-2026_22840_drive.google.com.jpeg" alt="">
-        <img src="Screenshot_9-3-2026_22850_drive.google.com.jpeg" alt="">
-        <img src="Screenshot_9-3-2026_22858_drive.google.com.jpeg" alt="">
-        <img src="Screenshot_9-3-2026_2288_drive.google.com.jpeg" alt="">
-        <img src="Screenshot_9-3-2026_2296_drive.google.com.jpeg" alt="">
-    </div>
-</main>
+<div class="myphotos">
+    <img src="img1.jpeg" alt="">
+    <img src="img2.jpeg" alt="">
+    <img src="img4.jpeg" alt ="">
+    <img src="img5.jpeg" alt ="">
+    <img src="img6.jpeg" alt ="">
+    <img src="img7.jpeg" alt ="">
+    <img src="img8.jpeg" alt ="">
+    <img src="img9.jpeg" alt ="">
+</div>
 
 </body>
 </html>
