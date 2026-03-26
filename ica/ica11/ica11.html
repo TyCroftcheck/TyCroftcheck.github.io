@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="project1.css">
+    <style>
+        header {
+            margin-bottom: 15px;
+        }
+
+        .generate {
+            border-color: forestgreen;
+            border-width: 4px;
+        }
+
+    </style>
 </head>
 
 <body>
+    <header>
+        <h1>Ty Croftcheck</h1>
+
+    <nav>
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
+    </header>
+
     <div>
     <label for="custom-name">Enter custom name:</label>
     <input id="custom-name" type="text" placeholder="" />
@@ -37,21 +62,13 @@ function randomValueFromArray(array) {
 
 // Raw text strings
 
-const characters = ["Willy the Goblin", "Big Daddy", "Father Christmas"]
-// Willy the Goblin
-// Big Daddy
-// Father Christmas
+const characters = ["Frodo Baggins", "Chicken Joe", "Ty"]
 
-const places = ["the soup kitchen", "Disneyland", "the White House"]
-// the soup kitchen
-// Disneyland
-// the White House
+const places = ["Riverwood", "Mexico", "The Casino"]
 
-const events = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and slithered away"]
-// spontaneously combusted
-// melted into a puddle on the sidewalk
-// turned into a slug and slithered away
+const events = ["Got in a fight", "Did a kickflip", "Shredded Guitar"]
 
+const foods = ["Sushi", "Ice Cream", "Pizza"]
 
 
 // Partial return random string function
@@ -60,8 +77,8 @@ function returnRandomStoryString() {
 const randomCharacter = randomValueFromArray(characters);
 const randomPlace = randomValueFromArray(places); 
 const randomEvent = randomValueFromArray(events);
-let storyText = `It was 94 Fahrenheit outside, so ${randomCharacter} went for a walk. When they got to ${randomEvent}, they stared in horror for a few moments, then ${randomEvent}. Bob saw the whole thing, but was not surprised — ${randomCharacter} weighs 300 pounds, and it was a hot day.`
-
+const randomFood = randomValueFromArray(foods);
+let storyText = `On a warm summer day, around 70 Fahrenheit ${randomCharacter} and Bob, left to go get some food. So he headed off to ${randomPlace}. While ${randomCharacter} was there, He ${randomEvent}. After this ${randomCharacter} finally got 1 pound of ${randomFood}.`
   return storyText;
 }
 
@@ -81,13 +98,15 @@ function generateStory() {
     const weight = `${Math.round(300/14)} stone`;
     const temperature = `${Math.round((94-32)*(5/9))} Celsius`;
   
-    newStory = newStory.replace("300 poiunds" , weight);
-    newStory = newStory.replace("94 Fahrenheit", temperature);
+    newStory = newStory.replace("1 pound" , weight);
+    newStory = newStory.replace("70 Fahrenheit", temperature);
   }
   // TODO: replace "" with the correct expression
   story.textContent = newStory;
   story.style.visibility = "visible";
 }
 </script>
+
+
 </body>
 </html>

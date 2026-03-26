@@ -1,0 +1,96 @@
+
+    :root {
+        --color-primary: #1b512d;      
+        --color-secondary: #FAF3DD; 
+        --color-accent: #020122;      
+        --color-neutral: #858786;     
+        --color-highlight: #F4442E;   
+            
+            /* Derived Colors for Flexibility */
+        --color-background:  white;
+        --color-text-dark: black;
+        --color-text-light: var(--color-neutral);
+
+            /* Typography */
+        --font-primary: 'Lexend Deca', -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-secondary: 'Play', monospace;
+
+            /* Spacing System */
+        --spacing-xs: 0.16rem;
+        --spacing-sm: 0.32rem;
+        --spacing-md: 0.64rem;
+        --spacing-lg: 1.08rem;
+        --spacing-xl: 1.64rem;
+
+            /* Border Radius */
+        --radius-sm: 4px;
+        --radius-md: 8px;
+        --radius-lg: 12px;
+        }
+
+* {
+        box-sizing: border-box;
+      }
+
+header {
+            padding: 10px;
+            background-color: #1b512d;
+            margin: 0px;
+
+        }
+
+h1 {
+            font-size: 36px;
+            color: white;
+        }
+
+nav ul {
+            background-color: darkgreen;
+            list-style: none;
+            padding: 0px;
+            margin: 0;
+            display: flex;
+            gap: 3em;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            padding: 0.5em;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: lightgreen;
+            color: #020122;
+        }
+
+
+body {
+    background-color: var(--color-background);
+    margin: 0;
+}
+
+main {
+    color: var(--color-text-dark);
+    font-family: var(--font-primary) ;
+}
+
+@media (max-width: 600px) {
+            .imageLinks {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.5em;
+                }
+
+            .headshot img {
+                width: 140px;
+            }
+        }
