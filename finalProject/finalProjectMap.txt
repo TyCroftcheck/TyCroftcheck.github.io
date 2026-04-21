@@ -1,0 +1,4 @@
+1. Display gear in Nuetral and speed at 0
+2. Shift to 1st to start, make speed = 3
+3. Hold gas to slowly increase speed to 20
+4. when speed > 17 allow shift to 2nd.
