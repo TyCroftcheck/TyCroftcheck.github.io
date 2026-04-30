@@ -24,66 +24,7 @@
                 display.classList.remove('redline');
             }
         }
-
-        button.addEventListener('mousedown', () => {
-            clearInterval(upInterval);
-            clearInterval(downInterval);
-
-            upInterval = setInterval(() => {
-            let max = gear * 20;
-             if (gear > 0 && value < max) {
-                    value++;
-                }
-                updateDisplay();
-            }, 100);
-        });
-
-        button.addEventListener('mouseup', () => {
-            clearInterval(upInterval);
-            clearInterval(downInterval);
-
-                downInterval = setInterval(() => {
-                  let min;
-                  if (gear === 0){
-                    min = 0;
-                  } else if (gear === 1){
-                    min = 1;
-                  } else {
-                    min = (gear - 1) * 20;
-                  }
-
-                  if (value > min) {
-                    value--;
-                    updateDisplay();
-                } else {
-                    clearInterval(downInterval);
-                } 
-            }, 300);
-        });
-
-        button.addEventListener('mouseleave', () => {
-            clearInterval(upInterval);
-            clearInterval(downInterval);
-
-            downInterval = setInterval(() => {
-                  let min;
-                  if (gear === 0){
-                    min = 0;
-                  } else if (gear === 1){
-                    min = 1;
-                  } else {
-                    min = (gear - 1) * 20;
-                  }
-
-                  if (value > min) {
-                    value--;
-                    updateDisplay();
-                } else {
-                    clearInterval(downInterval);
-                } 
-            }, 300);
-        }); 
-
+        
         document.getElementById('shiftUp').addEventListener('click', () => {
             let max = gear * 20;
 
@@ -127,42 +68,13 @@
 
         const brakeButton = document.getElementById('brake');
         let brakeInterval = null;
-    
-        brakeButton.addEventListener('mousedown', () => {
-            clearInterval(upInterval);
-            clearInterval(downInterval);
-            clearInterval(brakeInterval);
-            brakeInterval = setInterval(() => {
-             let min;
-                    if (gear === 0){
-                    min = 0;
-                    } else if (gear === 1){
-                    min = 1;
-                    } else {
-                    min = (gear - 1) * 20;
-                    }
-                    if (value > min) {
-                    value--;
-                    updateDisplay();
-                } else {        
-                    clearInterval(brakeInterval);
-                }       
-            }, 100);
-        });
-    
-        brakeButton.addEventListener('mouseup', () => {
-            clearInterval(brakeInterval);
-        });
-
-        brakeButton.addEventListener('mouseleave', () => {
-            clearInterval(brakeInterval);
-        });
-
-        let clutchEngaged = false;
+  
         let gasHeld = false;
         let brakeHeld = false;
+        let clutchEngaged = false;
 
-       function startGas() {
+
+        function startGas() {
         clearInterval(upInterval);
         clearInterval(downInterval);
 
@@ -175,7 +87,8 @@
         }, 100);
        }
 
-         function stopGas() {
+     
+        function stopGas() {
         clearInterval(upInterval);
 
         downInterval = setInterval(() => {
@@ -223,26 +136,36 @@
         }
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'w' && !gasHeld) {
+            let key = e.key.toLowerCase();
+            if (key === 'd' && !gasHeld) {
                 gasHeld = true;
+                document.getElementById('gas').classList.add('pressed');
                 startGas();
-            } else if (e.key === 's' && !brakeHeld) {
+            } else if (key === 's' && !brakeHeld) {
                 brakeHeld = true;
+                document.getElementById('brake').classList.add('pressed');
                 startBrake();
-            } else if (e.key === 'a' && !clutchEngaged) {
+            } else if (key === 'a' && !clutchEngaged) {
                 clutchEngaged = true;
                 document.getElementById('clutch').classList.add('pressed');
+            } else if (key === 'e') {
+                document.getElementById('shiftUp').click();
+            } else if (key === 'q') {
+                document.getElementById('shiftDown').click();
             }
         });
 
         document.addEventListener('keyup', (e) => { 
-            if (e.key === 'w') {
+            let key = e.key.toLowerCase();
+            if (key === 'd') {
                 gasHeld = false;
+                document.getElementById('gas').classList.remove('pressed');
                 stopGas();
-            } else if (e.key === 's') {
+            } else if (key === 's') {
                 brakeHeld = false;
+                document.getElementById('brake').classList.remove('pressed');
                 stopBrake();
-            } else if (e.key === 'a') {
+            } else if (key === 'a') {
                 clutchEngaged = false;
                 document.getElementById('clutch').classList.remove('pressed');
             }   
