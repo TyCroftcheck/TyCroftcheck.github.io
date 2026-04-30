@@ -63,5 +63,28 @@ button:active {
 }
 
 .pressed {
-    transform: scale(0.9);
+    transform: scale(0.7);
     }
+
+.transmission {
+    position: relative;
+    display: inline-block;
+}
+
+#gearPath {
+    display: block;
+    z-index: 1;
+}
+
+#shifter {
+    position: absolute;
+    left: 170px;
+    top: 160px;
+    width: 225px;
+    z-index: 2;
+
+}
+
+#value.redline {
+    color: red;
+}

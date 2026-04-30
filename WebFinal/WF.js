@@ -18,6 +18,7 @@
             display.textContent = value;
 
             let max = gear * 20;
+            let shiftUpButton = document.getElementById('shiftUp');
             if (gear > 0 && value >= max - 5) {
                 display.classList.add('redline');
             } else {
@@ -41,6 +42,7 @@
             } else {
                 document.getElementById('gear').textContent = `Current Gear: ${gear}`;
             }
+                updateShifter();
         });
 
            document.getElementById('reset').addEventListener('click', () => {
@@ -50,6 +52,7 @@
             gear = 0;
             updateDisplay();
             document.getElementById('gear').textContent = `Current Gear: ${gear}`;
+                updateShifter();
         });
 
         document.getElementById('shiftDown').addEventListener('click', () => {
@@ -64,6 +67,7 @@
             } else {
                 document.getElementById('gear').textContent = `Current Gear: ${gear}`;
             }
+                updateShifter();
         });
 
         const brakeButton = document.getElementById('brake');
@@ -149,8 +153,10 @@
                 clutchEngaged = true;
                 document.getElementById('clutch').classList.add('pressed');
             } else if (key === 'e') {
+                document.getElementById('shiftUp').classList.add('pressed');
                 document.getElementById('shiftUp').click();
             } else if (key === 'q') {
+                document.getElementById('shiftDown').classList.add('pressed');
                 document.getElementById('shiftDown').click();
             }
         });
@@ -168,5 +174,37 @@
             } else if (key === 'a') {
                 clutchEngaged = false;
                 document.getElementById('clutch').classList.remove('pressed');
-            }   
+            } else if (key === 'e') {
+                document.getElementById('shiftUp').classList.remove('pressed');
+            } else if (key === 'q') {
+                document.getElementById('shiftDown').classList.remove('pressed');
+            }
         });
+
+        
+        // function updateShifter() {
+        //     let shifter = document.getElementById('shifter');
+        //     if (gear === 0) {
+        //         shifter.style.left = '150px';
+        //         shifter.style.top = '150px';
+        //     } else if (gear === 1) {
+        //         shifter.style.left = '10px';
+        //         shifter.style.top = '70px';
+        //     } else if (gear === 2) {
+        //         shifter.style.left = '230px';
+        //         shifter.style.top = '70px';
+        //     } else if (gear === 3) {
+        //         shifter.style.left = '110px';
+        //         shifter.style.top = '160px';
+        //     } else if (gear === 4) {
+        //         shifter.style.left = '230px';
+        //         shifter.style.top = '160px';
+        //     } else if (gear === 5) {
+        //         shifter.style.left = '110px';
+        //         shifter.style.top = '250px';
+        //     }   
+        // }
+
+        // document.getElementById('gear').textContent = `Current Gear: N`;
+        // updateShifter();
+        // updateDisplay();
